@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+from sys import argv
+from socket import inet_aton
+from struct import unpack
+unpacked, = unpack('>L', inet_aton(argv[1]))
+print hex(unpacked)

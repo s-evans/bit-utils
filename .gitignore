@@ -1,0 +1,5 @@
+eclim
+tags
+*.un~
+*.swp
+.ropeproject
