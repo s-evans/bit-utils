@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from sys import argv
-value = int(argv[1], 0)
-value = ~value
-value &= 0xffffffffffffffff
-print '0x%x' % value
+for idx in range(1, len(argv)):
+    value = int(argv[idx], 0)
+    value = ~value
+    value &= 0xffffffffffffffff
+    print '0x%x' % value
