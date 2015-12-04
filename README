@@ -1,1 +1,6 @@
-TODO: float and double to hex, hex to float / double
+TODO: 
+* float and double to hex
+* hex to float / double
+* netmask
+* wcmask
+* match ones and twos complement output size to input size

@@ -3,4 +3,4 @@ from sys import argv
 value = int(argv[1], 0)
 value = ~value
 value &= 0xffffffffffffffff
-print hex(value)
+print '0x%x' % value
