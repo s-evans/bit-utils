@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+from sys import argv
+from socket import inet_aton, inet_ntoa
+from struct import unpack, pack
+mask_length = int(argv[1])
+if mask_length > 32 or mask_length < 0:
+    raise
+mask_length = 32 - mask_length
+mask = (0xffffffff >> mask_length) << mask_length
+for idx in range(2, len(argv)):
+    unpacked, = unpack('>L', inet_aton(argv[idx]))
+    print inet_ntoa(pack('>L', unpacked & mask))
