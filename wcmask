@@ -10,4 +10,4 @@ mask = (0xffffffff >> mask_length) << mask_length
 mask = ~mask
 for idx in range(2, len(argv)):
     unpacked, = unpack('>L', inet_aton(argv[idx]))
-    print inet_ntoa(pack('>L', unpacked & mask))
+    print(inet_ntoa(pack('>L', unpacked & mask)))

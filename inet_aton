@@ -4,4 +4,4 @@ from socket import inet_aton
 from struct import unpack
 for idx in range(1, len(argv)):
     unpacked, = unpack('>L', inet_aton(argv[idx]))
-    print '0x%x' % unpacked
+    print('0x%x' % unpacked)
